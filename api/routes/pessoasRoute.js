@@ -4,5 +4,9 @@ const PessoaController = require("../controller/PessoaController")
 const router = Router()
 
 router.get("/pessoas", PessoaController.pegaTodasAsPessoas)
+router.get("/pessoas/:id", PessoaController.pegaUmaPessoa)
+router.post("/pessoas", PessoaController.criaPessoa)
+router.put("/pessoas/:id", PessoaController.atualizaPessoa)
+router.delete("/pessoas/:id", PessoaController.deletaPessoa)
 
-module.exports = Router
+module.exports = router
