@@ -8,5 +8,8 @@ router
 .post("/pessoas", PessoaController.criaPessoa)
 .put("/pessoas/:id", PessoaController.atualizaPessoa)
 .delete("/pessoas/:id", PessoaController.deletaPessoa)
-
+.get("/pessoas/:estudanteId/matricula/:matriculaId", PessoaController.pegaUmaMatricula) //matricula
+.post("/pessoas/:estudanteId/matricula", PessoaController.criaMatricula)
+.put("/pessoas/:estudanteId/matricula/:matriculaId", PessoaController.atualizaMatricula)
+.delete("/pessoas/:estudanteId/matricula/:matriculaId", PessoaController.deletaMatricula)
 module.exports = router
